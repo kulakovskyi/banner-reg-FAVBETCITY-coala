@@ -1,2 +1,8 @@
-let mainPage = document.querySelector('.fav__page');
-setTimeout(() => mainPage.classList.add('overflow'), 1000);
+(function init100vh(){
+    function setHeight() {
+        let vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+    }
+    setHeight();
+    window.addEventListener('resize', setHeight);
+})();
