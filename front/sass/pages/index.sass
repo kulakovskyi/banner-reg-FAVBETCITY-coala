@@ -1,0 +1,319 @@
+$blue: #000055
+$magenta: #ff267e
+$green: #05C489
+$grey: #D7D7D7
+$grey_2: #EFEFEF
+$grey_3: #F6F6F6
+$grey_4: #E3E3E3
+$gray_5: #EDEDED
+$white: #fff
+
+$font-suisse-reg: SuisseIntl-Regular, sans-serif
+$font-suisse-med: SuisseIntl-Medium, sans-serif //500
+$font-suisse-semb: SuisseIntl-SemiBold, sans-serif //600
+$font-wulcan: WulkanDisplay-SemiBoldItalic, sans-serif
+
+
+body
+  img
+    max-width: 100%
+    height: auto
+
+.fav__page
+  position: relative
+  -webkit-tap-highlight-color: rgba(0,0,0,0)
+  overflow: hidden
+  .banner
+    height: 480px
+    background: $blue
+    .container
+      max-width: 1428px
+      display: flex
+      align-items: center
+      justify-content: space-between
+      height: 100%
+    &-descr
+      &__title
+        max-width: 609px
+        text-transform: uppercase
+        font-family: $font-suisse-semb
+        font-size: 76px
+        line-height: 105px
+        color: $white
+        letter-spacing: 0.02em
+        span
+          color: $magenta
+          font-family: $font-wulcan
+      &__bonus
+        display: flex
+        margin-top: 37px
+        &-item
+          position: relative
+          z-index: 10
+          &:not(:last-child)
+            margin: 0 20px 0 0
+          &_top
+            display: flex
+            margin: 0 0 15px 0
+            .back
+              font-family: $font-suisse-med
+              font-size: 26px
+              line-height: 30px
+              color: $gray_5
+              background: $magenta
+              border: 1px solid $magenta
+              padding: 14px 12px 12px
+            .border
+              font-family: $font-wulcan
+              font-size: 26px
+              line-height: 26px
+              padding: 16px 16px 14px
+              color: $magenta
+              border: 1px solid $magenta
+          &_bottom
+            font-family: $font-suisse-semb
+            font-size: 16px
+            line-height: 21px
+            color: $gray_5
+            text-transform: uppercase
+
+
+    &-person
+      height: 100%
+      position: relative
+      .wrapper
+        position: relative
+        height: 100%
+        display: flex
+        align-items: center
+      &__man
+        width: 433px
+        height: 424px
+        position: absolute
+        left: -33px
+        bottom: 0
+        z-index: 2
+      &__bg
+        width: 617px
+        height: 345px
+        margin-top: 40px
+        z-index: 1
+      &__secondBg
+        width: 112px
+        height: 91px
+        position: absolute
+        top: 6px
+        left: 40px
+        &:before
+          content: ''
+          width: 106px
+          height: 119px
+          position: absolute
+          top: 9px
+          right: -42px
+          z-index: 1
+      &__name
+        max-width: 133px
+        font-family: $font-suisse-reg
+        font-size: 11px
+        line-height: 14px
+        color: $white
+        position: absolute
+        left: -70px
+        bottom: 8px
+        text-align: end
+        z-index: 3
+  .info
+    position: relative
+    &:after,&:before
+      content: ''
+      width: 50%
+      position: absolute
+      top: 0
+      height: 100%
+      z-index: -1
+    &:after
+      background: $grey
+      left: 0
+    &:before
+      background: $grey_3
+      right: 0
+    .container
+      max-width: 1428px
+      display: flex
+      justify-content: center
+    &-spin,&-risk,&-bonus
+      position: relative
+      &__title
+        max-width: 300px
+        font-family: $font-suisse-semb
+        color: $blue
+        text-transform: uppercase
+        font-size: 38px
+        line-height: 45px
+        letter-spacing: 0.04em
+      &__sub
+        margin-top: 6px
+        color: $magenta
+        font-size: 26px
+        line-height: 26px
+        font-family: $font-wulcan
+
+      &__descr
+        margin-top: 12px
+        max-width: 300px
+        font-family: $font-suisse-med
+        color: $blue
+        font-size: 18px
+        line-height: 23px
+        letter-spacing: 0.04em
+      &__btn
+        margin-top: 21px
+    &-spin
+      background: $grey
+      padding: 46px 10px 37px 26px
+      flex: 0 0 33%
+      &:before
+        content: ""
+        background: url("../img/gift.svg") no-repeat 0 0/contain
+        width: 126px
+        height: 104px
+        position: absolute
+        right: 16px
+        bottom: 0
+      &__btn
+        padding: 20px 32px 18px
+    &-risk
+      background: $grey_2
+      padding: 46px 10px 38px 40px
+      flex: 0 0 34%
+      &:before
+        content: ""
+        background: url("../img/shield.svg") no-repeat 0 0/contain
+        width: 149px
+        height: 112px
+        position: absolute
+        right: 3px
+        bottom: 0
+      &__btn
+        padding: 20px 65px 18px
+    &-bonus
+      background: $grey_3
+      padding: 46px 0 38px 40px
+      flex: 0 0 33%
+      &:before
+        content: ""
+        background: url("../img/money.svg") no-repeat 0 0/contain
+        width: 122px
+        height: 129px
+        position: absolute
+        right: 16px
+        bottom: 0
+      &__btn
+        padding: 20px 65px 18px
+  .rules
+    padding: 80px 0
+    background: $grey_4
+    .container
+      max-width: 980px
+    &__drop
+      outline: none
+      cursor: pointer
+      &[open]
+        summary
+          &:before
+            transform: rotate(-45deg)
+            top: 33px
+            right: 46px
+          &:after
+            transform: rotate(45deg)
+            top: 33px
+            right: 39px
+      summary::marker,
+      summary::-webkit-details-marker
+        display: none
+      > summary
+        list-style: none
+      summary
+        font-family: $font-suisse-semb
+        font-size: 26px
+        color: $blue
+        letter-spacing: 0.04em
+        text-transform: uppercase
+        background: #CCCCCC
+        outline: none
+        position: relative
+        padding: 24px 28px 19px 36px
+        user-select: none
+        ::marker
+          display: none
+        &:before,
+        &:after
+          content: ''
+          background: $blue
+          width: 3px
+          height: 13px
+          display: block
+          position: absolute
+        &:before
+          transform: rotate(45deg)
+          top: 36px
+          right: 39px
+        &:after
+          transform: rotate(-45deg)
+          top: 28px
+          right: 39px
+      .drop-txt
+        background: $grey_3
+        padding: 37px 70px 35px 64px
+        cursor: auto
+        &__title, p
+          margin: 17px 0
+        &__title
+          font-family: $font-suisse-semb
+          color: $blue
+          font-size: 20px
+        p
+          font-family: $font-suisse-reg
+          font-size: 18px
+          line-height: 31px
+          color: $blue
+          letter-spacing: 0.02em
+        li
+          font-family: $font-suisse-reg
+          font-size: 18px
+          line-height: 31px
+          color: $blue
+          letter-spacing: 0.02em
+          position: relative
+          &:before
+            content: ''
+            width: 7px
+            height: 7px
+            border-radius: 50%
+            background: $blue
+            position: absolute
+            top: 11px
+            left: -16px
+        li+li
+          margin-top: 17px
+
+
+.btn
+  font-family: $font-suisse-med
+  color: $blue
+  text-transform: uppercase
+  font-size: 18px
+  line-height: 23px
+  letter-spacing: 0.04em
+  display: inline-block
+  border: 2px solid $green
+  transition: background .3s linear
+  position: relative
+  z-index: 1
+  &:hover
+    background: #05b37c
+
+.container
+  position: relative
+  margin: auto
